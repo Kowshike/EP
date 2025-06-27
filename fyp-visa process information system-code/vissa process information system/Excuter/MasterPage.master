@@ -1,0 +1,100 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="Excuter_MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Untitled Page</title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        #form1
+        {
+            top: 16px;
+            left: 230px;
+            position: absolute;
+            height: 713px;
+            width: 705px;
+        }
+        .style1
+        {
+            width: 100%;
+            height: 98px;
+        }
+        .style2
+        {
+            width: 100%;
+            height: 410px;
+        }
+        .style3
+        {
+            width: 206px;
+        }
+    </style>
+</head>
+<body bgcolor="#999999">
+    <form id="form1" runat="server">
+    <div style="top: 6px; left: 4px; position: absolute; height: 562px; width: 699px">
+        <asp:ScriptManager ID="ScriptManager1" runat="server" />
+        <table class="style1">
+            <tr>
+                <td>
+                    <asp:Image ID="Image1" runat="server" ImageUrl="~/IMAGES/images/img2.jpg" 
+                        Width="694px" />
+                </td>
+            </tr>
+        </table>
+        <table class="style1">
+            <tr>
+                <td>
+                    <asp:Image ID="Image2" runat="server" ImageUrl="~/IMAGES/images/banner2.gif" 
+                        Width="694px" Height="130px" />
+                    <asp:Button ID="Button1" runat="server" PostBackUrl="~/Login.aspx" 
+                        style="top: 216px; left: 605px; position: absolute; height: 35px; width: 84px" 
+                        Text="Signout" CausesValidation="False" />
+                    <asp:Image ID="Image3" runat="server" ImageUrl="~/IMAGES/visa.gif" 
+                        
+                        style="top: 163px; left: 390px; position: absolute; height: 87px; width: 138px" />
+                    <asp:TreeView ID="TreeView1" runat="server" Font-Size="Large" 
+                        ImageSet="Contacts" NodeIndent="10" 
+                        style="top: 340px; left: 13px; position: absolute; height: 200px" 
+                        Width="180px">
+                        <ParentNodeStyle Font-Bold="True" ForeColor="#5555DD" />
+                        <HoverNodeStyle Font-Underline="False" />
+                        <SelectedNodeStyle Font-Underline="True" HorizontalPadding="0px" 
+                            VerticalPadding="0px" />
+                        <Nodes>
+                            <asp:TreeNode Text="Applications" Value="Applications" 
+                                NavigateUrl="~/Excuter/applications.aspx"></asp:TreeNode>
+                            <asp:TreeNode Text="Enquiry" Value="Enquiry" 
+                                NavigateUrl="~/Excuter/Enquiry details.aspx"></asp:TreeNode>
+                            <asp:TreeNode Text="On site arrival" Value="On site arrival" 
+                                NavigateUrl="~/Excuter/onsitearrival.aspx"></asp:TreeNode>
+                            <asp:TreeNode Text="On site deparature" Value="On site deparature" 
+                                NavigateUrl="~/Excuter/onsitedeparature.aspx">
+                            </asp:TreeNode>
+                            <asp:TreeNode Text="Renual" Value="Renual" NavigateUrl="~/Excuter/Renual.aspx"></asp:TreeNode>
+                            <asp:TreeNode Text="Results" Value="Results" 
+                                NavigateUrl="~/Excuter/Results.aspx"></asp:TreeNode>
+                        </Nodes>
+                        <NodeStyle Font-Names="Verdana" Font-Size="8pt" ForeColor="Black" 
+                            HorizontalPadding="5px" NodeSpacing="0px" VerticalPadding="0px" />
+                    </asp:TreeView>
+                </td>
+            </tr>
+        </table>
+        <table class="style2">
+            <tr>
+                <td class="style3">
+                    &nbsp;</td>
+                <td>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+        </table>
+    </div>
+    </form>
+</body>
+</html>

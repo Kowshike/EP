@@ -1,0 +1,12 @@
+@charset "UTF-8";
+contact{
+	background: green;
+}
+
+name{
+	color: yellow;
+}
+
+name, email{
+	display: block;
+}

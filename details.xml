@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="myxsl.xsl" ?>
+<contact>
+	<person>
+		<name>XXX</name>
+		<email>xxx@xyz.com</email>
+		<mobile>1234567890</mobile>
+	</person>
+	<person>
+		<name>YYY</name>
+		<email>yyy@xyz.com</email>
+		<mobile>0987654321</mobile>
+	</person>
+	<person>
+		<name>ZZZ</name>
+		<email>zzz@xyz.com</email>
+		<mobile>2345678901</mobile>
+	</person>
+</contact>

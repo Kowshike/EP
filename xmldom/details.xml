@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<department>
+	<student>
+		<name>XXX</name>
+		<email>xxx@xyz.com</email>
+	</student>
+	<student>
+		<name>YYY</name>
+		<email>yyy@xyz.com</email>
+	</student>
+	<student>
+		<name>ZZZ</name>
+		<email>zzz@xyz.com</email>
+	</student>
+</department>

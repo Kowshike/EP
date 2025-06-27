@@ -1,0 +1,34 @@
+<HTML xmlns:h="http://java.sun.com/jsf/html">
+<head>
+
+<title>
+
+bean validation
+</title>
+</head>
+<body>
+<h:form>
+
+Name:
+<h:inputText value="#{user.name}" id="name" validatorMessage="Value is required">
+
+</h:inputText>
+<h:message for="name" style="color:red"/>
+<br/>
+Age :
+<h:inputText value="#{user.age}" id="age" validatorMessage="Age should be in the range between 18 and 30">
+
+</h:inputText>
+<h:message for="age" style="color:red"/>
+<br/>
+Mobile No :
+<h:inputText value="#{user.mobilenumber}" id="mno" validatorMessage="Mobile number must have 10 digits">
+</h:inputText>
+<h:message for="mno" style="color:red"/>
+<br/>
+<h:commandButton action="response" value="SUBMIT"/>
+</h:form>
+
+</body>
+
+</HTML>

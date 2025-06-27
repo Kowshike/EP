@@ -1,0 +1,90 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="Admin_MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Untitled Page</title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        #form1
+        {
+            top: 49px;
+            left: 85px;
+            position: absolute;
+            height: 551px;
+            width: 1130px;
+        }
+        .style1
+        {
+            width: 100%;
+            height: 172px;
+        }
+        .style2
+        {
+            width: 100%;
+            height: 380px;
+        }
+        .style3
+        {
+            width: 225px;
+        }
+    </style>
+</head>
+<body bgcolor="#cccccc">
+    <form id="form1" runat="server" dir="center">
+    <table class="style1">
+        <tr>
+            <td>
+                <asp:Image ID="Image1" runat="server" ImageUrl="~/IMAGES/images/banner2.gif" 
+                    
+                    
+                    
+                    style="top: 4px; left: 2px; position: absolute; height: 171px; width: 1125px" />
+                <asp:Image ID="Image2" runat="server" ImageUrl="~/IMAGES/visa.gif" 
+                    style="top: 29px; left: 695px; position: absolute; height: 79px; width: 97px" />
+            </td>
+        </tr>
+    </table>
+    <table class="style2">
+        <tr>
+            <td class="style3">
+                <asp:TreeView ID="TreeView1" runat="server" Font-Size="Large" ImageSet="Simple" 
+                    NodeIndent="10" 
+                    style="top: 246px; left: 48px; position: absolute; height: 204px; width: 136px">
+                    <ParentNodeStyle Font-Bold="False" />
+                    <HoverNodeStyle Font-Underline="True" ForeColor="#DD5555" />
+                    <SelectedNodeStyle Font-Underline="True" ForeColor="#DD5555" 
+                        HorizontalPadding="0px" VerticalPadding="0px" />
+                    <Nodes>
+                        <asp:TreeNode Text="New Excuter" ToolTip="please select" Value="New Excuter" 
+                            NavigateUrl="~/Admin/New Exective.aspx">
+                        </asp:TreeNode>
+                        <asp:TreeNode NavigateUrl="~/Admin/delete.aspx" Text="Delete Excuter" 
+                            Value="Delete Excuter"></asp:TreeNode>
+                        <asp:TreeNode NavigateUrl="~/Admin/visa renual.aspx" Text="Visa Renual Reports" 
+                            Value="Visa Renual Reports"></asp:TreeNode>
+                        <asp:TreeNode NavigateUrl="~/Admin/Enquiry.aspx" Text="Enquiry Reports" 
+                            Value="Enquiry Reports"></asp:TreeNode>
+                        <asp:TreeNode NavigateUrl="~/Admin/Result reorts.aspx" Text="Result Reports" 
+                            Value="Result Reports"></asp:TreeNode>
+                        <asp:TreeNode NavigateUrl="~/Admin/Empolye details.aspx" Text="Empoly Details" 
+                            Value="Empoly Details"></asp:TreeNode>
+                    </Nodes>
+                    <NodeStyle Font-Names="Verdana" Font-Size="8pt" ForeColor="Black" 
+                        HorizontalPadding="0px" NodeSpacing="0px" VerticalPadding="0px" />
+                </asp:TreeView>
+            </td>
+            <td>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </td>
+        </tr>
+    </table>
+    <asp:Button ID="Button1" runat="server" PostBackUrl="~/Login.aspx" 
+        style="top: 102px; left: 997px; position: absolute; height: 26px; width: 83px; bottom: 423px" 
+        Text="Sign out" />
+    </form>
+</body>
+</html>

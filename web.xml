@@ -1,0 +1,39 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+  
+  <servlet>
+  	<servlet-name>servletinterface</servlet-name>
+  	<servlet-class>com.klu.ServletInterfaceDemo</servlet-class>
+  </servlet>
+  
+  <servlet>
+  	<servlet-name>genericservlet</servlet-name>
+  	<servlet-class>com.klu.GenericSevletDemo</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>HttpServletDemo</servlet-name>
+  	<display-name>HttpServletDemo</display-name>
+  	<description></description>
+  	<servlet-class>com.klu.HttpServletDemo</servlet-class>
+  </servlet>
+  
+  
+  <servlet-mapping>
+  	<servlet-name>servletinterface</servlet-name>
+  	<url-pattern>/servletinterface</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+  	<servlet-name>genericservlet</servlet-name>
+  	<url-pattern>/genericservlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>HttpServletDemo</servlet-name>
+  	<url-pattern>/HttpServletDemo</url-pattern>
+  </servlet-mapping>
+  
+</web-app>

@@ -1,0 +1,31 @@
+<html xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+<head>
+	<title>EJB - MySQL</title>
+</head>
+<body>
+	<h3>Faculty Details</h3>
+	<h:form>
+		<p>Faculty ID  : <h:inputText value="#{faculty.fid}" /> </p>
+		<p>Faculty Name: <h:inputText value="#{faculty.fname}" /> </p>
+		<p>Faculty Dept: <h:inputText value="#{faculty.fdept}" /> </p>
+		<p><h:commandButton action="#{faculty.callSaveData()}" value="SAVE" /> </p>
+		<p><h:outputLabel value="#{faculty.res}" /></p>
+		
+		<h:dataTable value="#{faculty.list}" var="row">
+			<h:column>
+				<f:facet name="header">Faculty ID</f:facet>
+				#{row.fid}
+			</h:column>
+			<h:column>
+				<f:facet name="header">Faculty Name</f:facet>
+				#{row.fname}
+			</h:column>
+			<h:column>
+				<f:facet name="header">Department</f:facet>
+				#{row.fdept}
+			</h:column>
+		</h:dataTable>
+	</h:form>
+</body>
+</html>

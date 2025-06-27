@@ -1,0 +1,22 @@
+<html xmlns:h="http://java.sun.com/jsf/html">
+<head>
+	<title>EJB - Statefull</title>
+</head>
+<body>
+	<h3>EJB Statefull Session Bean</h3>
+	<p>Available Balance = #{bank.bal}</p>
+	<br/>
+	<h:form>
+		<h3>Deposit</h3>
+		<p>Enter the Amount to deposit: <h:inputText value="#{bank.damt}" /> </p>
+		<p><h:commandButton action="#{bank.callDeposit()}" value="DEPOSIT" /> </p>		
+	</h:form>
+	<br/>
+	<h:form>
+		<h3>Withdraw</h3>
+		<p>Enter the Amount to withdraw: <h:inputText value="#{bank.wamt}" /> </p>
+		<p><h:commandButton action="#{bank.callWithdraw()}" value="WITHDRAW" /></p>
+	</h:form>
+		
+</body>
+</html>

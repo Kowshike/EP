@@ -1,0 +1,25 @@
+<html xmlns:h="http://java.sun.com/jsf/html">
+<head>
+<title>REST Service</title>
+</head>
+<body>
+<h3>Simple Calculator using REST service</h3>
+<h:form>
+<p>
+Input A :
+<h:inputText value="#{calc.a}"/>
+</p>
+<p>
+Input B :
+<h:inputText value="#{calc.b}"/>
+</p>
+<p>Result = #{calc.result}</p>
+<p>
+<h:commandButton action="#{calc.callAdd()}" value="ADD"/>
+</p>
+<p><h:commandButton action="#{calc.callSub()}" value="SUB"/></p>
+<p><h:commandButton action="#{calc.callMul()}" value="MUL"/></p>
+<p><h:commandButton action="#{calc.callDiv()}" value="Div"/></p>
+</h:form>
+</body>
+</html>
